@@ -74,6 +74,7 @@ console.log(grade);
  const add2 = (x, y) => x + y;
  const sum2 = add2(10, 20);
  console.log(sum2);
+ 
 
 const hello3 = (name) => {
   console.log(`hello ${name}!`);
