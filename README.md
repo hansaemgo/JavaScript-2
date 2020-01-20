@@ -37,6 +37,16 @@
     - const 나 let으로 시작한다
     - function 키워드 대신에 => 화살표 구현
 
+### 07. 객체
+    - 객체 어떠한 값을 선언할때 하나의 이름에 여러종류의 값을 넣을 수 있게 해준다.
+    - const dog = { name : '멍멍이', age : 2} 여기서 name, age -> key
+    - 객체 선언시 {} 안의 형태 (키 : 원하는 값) 
+    - key는 공백이 있으면 안되고 만약 있다면 따옴표로 감싸서 문자열로 넣어준다.
+    - hero.의 중복입력 방지 -> 객체 비구조화 할당
+    - ex) const {alias, name, actor} = hero
+    - 파라미터 단계에서 객체 비구조화 
+    - ex) function Print({alias, name, actor})
+
 
 ### JavaScript 문법
 - 삼항연산자 Condition ? ture : false
