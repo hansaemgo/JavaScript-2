@@ -46,6 +46,10 @@
     - ex) const {alias, name, actor} = hero
     - 파라미터 단계에서 객체 비구조화 
     - ex) function Print({alias, name, actor})
+    - 객체 안에 함수 넣는 것 가능하며 this는 자신이 속해있는 객체 가르킨다.
+    - Getter/Setter : 특정값을 바꾸려고 하거나 조회하려고 할때 원하는 코드 실행가능 
+    - Getter : 특정값을 조회할때 우리가 특정코드를 실행시키고 연산된 값을 받아서 사용하는것을 의미한다
+    - Setter : 특정값 설정할때마다 함수를 실행하는데 사용된다.
 
 
 ### JavaScript 문법

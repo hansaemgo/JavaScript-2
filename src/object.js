@@ -75,6 +75,104 @@ print(captainAmerica2);
 
 
 /*===================객체 안에 함수 넣기=================*/
-const dog = {
-    
+const dogdog = {
+    name : '멍멍이',
+    sound : '멍멍!',
+    say : function () {                         //function 이름 생략해도 가능 
+        console.log(this.sound);                //this -> 함수가 위치한 자기자신의 객                                                                    // 단, 화살표 함수로 만들면 작동 안함 (this가 뭔지 모름)
+    }    
+};
+
+const cat ={
+    name : '야옹이',
+    sound : '야옹~'
+};
+
+cat.say = dogdog.say;
+cat.say();
+dogdog.say();
+
+
+
+/*============================= 객체 Getter와 Setter ======================*/
+
+const numbers = {
+    a : 1,
+    b : 2,
+    get sum() {                                            // Getter함수 어떤값을 무조건 반환( return )
+        console.log('sum 함수가 실행됩니다.');
+        return this.a + this.b;
+    }
+};
+
+console.log(numbers.sum);
+numbers.b = 5;
+console.log(numbers.sum)
+
+
+const mouse = {
+    _name : '쥐돌이',                                      
+    set name(value) {                                      // 파라미터 무조건 설정해야함
+        console.log('이름이 바뀝니다....' +  value);
+        this._name = value;
+    }
+};
+
+console.log(mouse._name);
+mouse.name = '쥐순이';
+console.log(mouse._name);
+
+
+/*============================= 객체 Getter와 Setter  예제 ======================*/
+
+const num = {
+    _a : 1, 
+    _b : 2,
+    sum : 3,
+    calculate() {
+        console.log('calculate');
+        this.sum = this._a + this._b;
+    },
+    get a() {
+        return this._a;     // 자신의 값 리턴
+    },
+    get b() {
+        return this._b;
+    },
+    set a(value) {
+        this._a = value;
+        this.calculate();
+    },
+    set b(value) {
+        this._b = value;
+        this.calculate();
+    }
 }
+
+
+console.log(num.sum);
+num.a = 5;
+num.b = 40;
+console.log(num.sum);
+
+/*============================= 객체 Getter와 Setter  예제 2 ======================*/
+
+const person = {
+    firstName : 'Go',
+    lastName : 'Hansaem',
+    get fullName () {
+        return  `${person.firstName} ${person.lastName}` 
+    },
+    set fullName(value) {
+       const parts = value.split(' ');
+       this.firstName = parts[0];
+       this.lastName = parts[1];
+    }
+};
+
+// getter => access properties 
+// setter => change ( mutate ) them
+
+
+person.fullName = 'kim jihyun';
+console.log(person);
