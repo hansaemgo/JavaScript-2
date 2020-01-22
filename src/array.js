@@ -144,6 +144,22 @@ console.log(index3);
 const index4 = todos.find(todo => todo.done === false ); // find => 값 자체를 반환
 console.log(index4);
 
+const tasksNotDone = todos.filter(todo => todo.done === false); //  (todo => !todo.done);
+console.log(tasksNotDone);
+
+const tasksDone = todos.filter(todo => todo.done === true);
+console.log(tasksDone);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
