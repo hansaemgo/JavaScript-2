@@ -70,6 +70,10 @@
         13. unshift : 배열의 맨앞에 새로운 원소를 추가
         14. push : 배열의 맨 마지막에 원소 추가
         push, pop / shift, unshift
+        15. concat : 여러개의 배열을 하나의 배열로/ 기존의 배열을 수정하지 않는다.
+        16. join : 배열 문자상태로 만들어줌 ( 파라미터 : separate)
+        17. reduce : 배열 내에 존재하는 요소에 대해 누적된 값
+            - reduce callback 함수의 인자 (accumlator, currentValue, currentIndex, array)
 
 
 

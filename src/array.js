@@ -228,7 +228,120 @@ console.log(arr2);
 
 
 
+/*===================================== 배열 내장함수 concat  =============================*/
 
+const arra = [1, 2, 3];
+const arrb = [4, 5,6 ];
+
+const concated = arra.concat(arrb);
+// 스프레드 연산자
+// const concated = [...arra, ...arrb];
+console.log(concated)
+
+
+/*===================================== 배열 내장함수 join  =============================*/
+
+const arrayJoin = [1, 2, 3, 4, 5];
+
+console.log(arrayJoin.join());
+console.log(arrayJoin.join( ' / ' ));
+console.log(arrayJoin.join( ', ' ));
+
+/*===================================== 배열 내장함수 reduce  =============================*/
+
+
+// 기존 방법 forEach
+const num = [1, 2, 3, 4, 5];
+    let sumNum = 0;
+    num.forEach(n => {
+        sumNum += n;
+    });
+
+console.log(sumNum);
+
+
+// reduce 사용 방법
+const num1 = [1, 2, 3, 4, 5];
+const avg = num1.reduce((accumelator, current, index, array) => {  
+    // 콜백함수의 네 인수 
+    if (index === array.length - 1 ) {
+       return (accumelator + current) / array.length;
+     }
+     return accumelator + current;
+}, 0);
+console.log(avg);
+
+
+// reduce 예제
+const alphabets = ['a', 'a', 'a', 'b', 'c', 'c', 'd', 'e'];
+const counts = alphabets.reduce((acc, current) => {
+    if (acc[current]) {
+        acc[current] += 1;
+    } else {
+        acc[current] = 1;
+    };
+    return acc;
+}, { });
+
+console.log(counts);
+
+
+
+
+/*===================================== 배열 내장함수 reduce 퀴즈 =============================*/
+
+
+// 10 보다 큰 수의 갯수 -1
+function countBiggerThanTen(numbers) {
+    return numbers.reduce((acc, current) => {
+      if (current > 10) {
+        return acc + 1;
+      } else {
+        return acc;
+      }
+    }, 0);
+  }
+  
+  const count = countBiggerThanTen([1, 2, 3, 5, 10, 20, 30, 40, 50, 60]);
+  console.log(count); // 5
+  
+  export default countBiggerThanTen;
+  
+
+
+
+// 10 보다 큰 수의 갯수 -2
+  function countBiggerThanTen(numbers) {
+    return numbers.filter(n => n > 10).length;
+  }
+  
+  const count = countBiggerThanTen([1, 2, 3, 5, 10, 20, 30, 40, 50, 60]);
+  console.log(count); // 5
+  
+  export default countBiggerThanTen;
+
+
+
+  
+
+// 10 보다 큰 수의 갯수 -3
+  function countBiggerThanTen(numbers) {
+    /* 구현해보세요 */
+    let count = 0;
+    numbers.forEach(n => {
+      if (n > 10) {
+        count++;
+      }
+    });
+    return count;
+  }
+  
+  const count = countBiggerThanTen([1, 2, 3, 5, 10, 20, 30, 40, 50, 60]);
+  console.log(count); // 5
+  
+  export default countBiggerThanTen;
+  
+  
 
 
 
