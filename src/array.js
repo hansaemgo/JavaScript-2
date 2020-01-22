@@ -151,6 +151,83 @@ const tasksDone = todos.filter(todo => todo.done === true);
 console.log(tasksDone);
 
 
+/*========================= 배열 내장함수 splice =============================*/
+
+const numbers = [10, 20, 30, 40, 50];
+
+const spliceIndex = numbers.indexOf(30);
+const spliced = numbers.splice(index, 2);
+console.log(numbers)                                         // 남은 원소 보여주기
+console.log(spliced)                                        // 사라진 원소 보여주기
+
+// 기존 배열 건드린다
+
+
+/*========================= 배열 내장함수 slice =============================*/
+
+const numbers2 = [10, 20, 30, 40, 50];
+const sliced = numbers2.slice(0, 2);
+console.log(sliced);
+console.log(numbers2)
+
+// 기존 배열 건드리지 않는다.
+
+
+/*========================= 배열 내장함수 shift =============================*/
+
+const numbers3 = [10, 20, 30, 40, 50];
+const value = numbers3.shift();
+numbers3.shift();
+numbers3.shift();
+numbers3.shift();
+console.log(numbers3)
+
+/*========================= 배열 내장함수 pop =============================*/
+
+const numbers4 = [10, 20, 30, 40, 50];
+const value1 = numbers4.pop();
+console.log(numbers4)
+// 왼쪽에서 배열 추가
+
+
+/*========================= 배열 내장함수 unshift =============================*/
+
+const numbers6 = [10,20,30,40,50]
+const value3 = numbers6.unshift(5);
+console.log(numbers6);
+//  왼쪽에서 배열 추가
+
+
+
+/*========================= 배열 내장함수 push =============================*/
+
+const numbers5 = [10,20,30,40,50]
+const value2 = numbers5.push(2);
+console.log(numbers5);
+
+
+
+
+/*========================= 배열 내장함수 push & pop  =============================*/
+
+const arr = [1, 2, 3, 4, 5];
+const valueArr = arr.push(6);
+const valluArr = arr.pop();
+console.log(arr);
+console.log(arr);
+
+
+
+/*========================= 배열 내장함수 shift & unshift  =============================*/
+
+const arr2 = [1, 2, 3, 4, 5];
+const valueAr2r = arr2.shift();
+const valluArr2 = arr2.unshift(100); 
+console.log(arr2);
+console.log(arr2);
+
+
+
 
 
 
