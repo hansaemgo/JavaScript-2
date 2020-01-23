@@ -56,3 +56,6 @@ const cat2 = new Cat2('야옹이', '야옹');
 
 dog2.say();
 cat2.say();
+
+
+
